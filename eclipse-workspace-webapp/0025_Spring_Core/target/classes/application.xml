@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean name="std" class="Model.Student" autowire="byType">
+    
+    		<property name="id" value="1"/>
+    		<property name="name" value="manish"/>
+    		
+    		<property name="language" >
+    		<list>
+    		<value>Hindi</value>
+    		<value>English</value>
+    		<value>Punjabi</value>
+    		</list>
+    		</property>
+    </bean>
+    
+    <bean name="adr" class="Model.Address">
+    	<property name="city" value="Surat"></property>
+    	<property name="state" value="Gujarat"></property>
+    	<property name="country" value="India"></property>
+    </bean>
+    
+    <bean name="acc1" class="Model.Account">
+    	<property name="accName" value="Manish"></property>
+    	<property name="bankName" value="Punjab Bank"></property>
+    </bean>
+    
+    <bean name="acc2" class="Model.Account">
+    	<property name="accName" value="Manish"></property>
+    	<property name="bankName" value="BOB"></property>
+    </bean>
+    
+    
+    <bean name="q" class="Model.Question" autowire="byType">
+    	<property name="qno" value="1"></property>
+    	<property name="question" value="What is java?"></property>
+    </bean>
+    
+    <bean name="ans1" class="Model.Answer">
+    	<property name="ans" value="its a programming Language."></property>
+    </bean>
+    
+    <bean name="ans2" class="Model.Answer">
+    	<property name="ans" value="its a oops Language."></property>
+    </bean>
+    
+   </beans>

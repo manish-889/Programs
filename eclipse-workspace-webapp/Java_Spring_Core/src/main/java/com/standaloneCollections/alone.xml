@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+    
+    <!-- Standlone List -->
+    <util:list list-class="java.util.LinkedList" id="linkedlist">
+    	<value>Manish</value>
+    	<value>Hariom</value>
+    	<value>Tarun</value>
+    </util:list>
+    
+    <!-- Standalone Map -->
+    <util:map map-class="java.util.TreeMap" id="treemap">
+    	<entry key="Java" value="32000" />
+    	<entry key="Python" value="15000"/>
+    	<entry key="C++" value="5000" />
+    </util:map>
+    
+    <!-- Standalone Properties -->
+    <util:properties id="Pro">
+    	<prop key="Driver">com.mysql.cj.jdbc.Driver</prop>
+    	<prop key="url">mysql:jdbc://localhost:3306/Database</prop>
+    	<prop key="username">root</prop>
+    	<prop key="password">manishgiri</prop>
+    </util:properties>
+    
+    <bean class="com.standaloneCollections.Person" name="p1">
+    	<property name="name" ref="linkedlist" />
+    	<property name="course" ref="treemap" />
+    	<property name="properties" ref="Pro" />
+    </bean>
+    
+    
+</beans>
+    

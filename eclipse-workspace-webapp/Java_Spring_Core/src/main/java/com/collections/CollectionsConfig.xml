@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+   
+   <bean class="com.collections.Emp" name="emp1">
+   		<property name="name">
+   			<value>Manish Giri</value>
+   		</property>
+   		
+   		<property name="phones">
+   			<list>
+   				<value>7383186491</value>
+   				<value>8695754862</value>
+   				<value>5623897410</value>
+   			</list>
+   		</property>
+   		
+   		<property name="addresses">
+   			<set>
+   				<value>Bharuch</value>
+   				<value>Kim</value>
+   				<value>Surat</value>
+   			</set>
+   		</property>
+   		
+   		<property name="courses">
+   		 	<map>
+   		 		<entry key="Java" value="8-Months" />
+   		 		<entry key="Hibernate" value="3-Weeks" />
+   		 		<entry key="Spring" value="1-Months" />
+   		 	</map>
+   		</property>
+   		
+   		<property name="properties">
+   			<props>
+   				<prop key="name">Manish</prop>
+   				<prop key="age">21</prop>
+   				<prop key="hieght">6.ft</prop>
+   			</props>
+   		</property>
+   </bean>
+    
+</beans>
+    
